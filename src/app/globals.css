@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --green: #4ade80;
+  --green-dim: rgba(74, 222, 128, 0.12);
+  --green-glow: rgba(74, 222, 128, 0.25);
+  --amber: #f5a623;
+  --blue: #4da9ff;
+  --red: #ff4d6a;
+  --bg: #161616;
+  --bg-panel: #0f0f0f;
+  --border-dim: rgba(255, 255, 255, 0.07);
+  --text: #e8edf2;
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-dim: rgba(255, 255, 255, 0.22);
+  --mono: 'Share Tech Mono', monospace;
+  --cond: 'Barlow Condensed', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #161616;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 3px,
+    rgba(255, 255, 255, 0.018) 3px,
+    rgba(255, 255, 255, 0.018) 4px
+  );
+  font-family: var(--cond);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+::selection {
+  background: rgba(74, 222, 128, 0.25);
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(74,222,128,0.3); }
