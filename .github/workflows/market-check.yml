@@ -1,0 +1,19 @@
+name: Market Check
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  market-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger market check
+        run: |
+          curl -X POST "${{ secrets.APP_URL }}/api/market" \
+            -H "x-cron-secret: ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            --fail \
+            --silent \
+            --show-error

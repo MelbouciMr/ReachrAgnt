@@ -1,0 +1,19 @@
+name: Agent Decision Loop
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+jobs:
+  agent-loop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run agent decision loop
+        run: |
+          curl -X POST "${{ secrets.APP_URL }}/api/agent" \
+            -H "x-cron-secret: ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            --fail \
+            --silent \
+            --show-error
