@@ -156,7 +156,7 @@ export function TVMonitor() {
               <div className={styles.tokenRow}>
                 <Image src="/tv-logo.png" alt="R" width={20} height={20} style={{ borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', objectFit: 'cover', flexShrink: 0 }} />
                 <div className={styles.tokInfo}>
-                  <div className={styles.tokName}>REACHR — $RCHR</div>
+                  <div className={styles.tokName}>REACHR — $REACHR</div>
                   <div className={styles.tokAddr}>
                     {process.env.NEXT_PUBLIC_APP_URL
                       ? '0x4d94c4c70c8f971…'
